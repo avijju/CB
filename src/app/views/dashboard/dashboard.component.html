@@ -1,0 +1,119 @@
+<div>
+
+  <div class="col-lg-12" style="text-align: center">
+    <h4 style="color:#d42e12">My Dashboard</h4>
+
+   
+  </div>
+  <hr style="background-color: #bbb;height: 1px;width: 100%">
+  <table style="width: 100%;">
+    <tbody>
+      <tr style="width: 100%">
+       
+        <!-- <div class="row"> -->
+        <td style="width: 25%;min-width: 200px;">
+          <div class="card" style="box-shadow: 5px 5px 7px rgba(33,33,33,.7);">
+            <div _ngcontent-c4="" class="card-header" style="font-weight: 600;font-size: 17px;"> My PEP </div>
+            <div class="card-body">
+
+
+
+
+              <div>
+
+                <ul style="list-style-type: none;margin-left: -30px;margin-right: 10px;">
+                  <li class="lilist"><a href="#" class="aclass pull-left">Jan 2019 </a><img src="assets/img/green.png"
+                      class="pull-right" alt="Logo" style="width:25px;height:25px;padding-right: 3px"></li>
+                  <li class="lilist"><a href="#" class="aclassRed pull-left">Dec 2018</a> <img src="assets/img/red.png"
+                      alt="Logo" class="pull-right" style="widows: 25px;height:25px;padding-right: 3px"></li>
+                  <li class="lilist"><a class="aclassDis pull-left">Nov 2018 </a></li>
+                  <li class="lilist"><a href="#" class="aclass pull-left">Oct 2018</a> <img src="assets/img/green.png"
+                      alt="Logo" class="pull-right" style="width:25px;height:25px;padding-right: 3px"></li>
+                  <li class="lilist"><a href="#" class="aclassRed pull-left">Sep 2018</a><img src="assets/img/red.png"
+                      alt="Logo" class="pull-right" style="width:25px;height:25px;padding-right: 3px"></li>
+                  <li class="lilist"><a class="aclassDis pull-left">Aug 2018 </a></li>
+                  <li class="lilist"><a href="#" class="aclass pull-left">Jul 2018</a> <img src="assets/img/green.png"
+                      alt="Logo" class="pull-right" style="width:25px;height:25px;padding-right: 3px"></li>
+                  <li class="lilist"><a href="#" class="aclassRed pull-left">Jun 2018</a> <img src="assets/img/red.png"
+                      alt="Logo" class="pull-right" style="width:25px;height:25px;padding-right: 3px ;"></li>
+                  <li class="lilist"><a class="aclassDis pull-left">May 2018 </a></li>
+                  <li class="lilist"><a href="#" class="aclass pull-left">Apr 2018</a> <img src="assets/img/green.png"
+                      alt="Logo" class="pull-right" style="width:25px;height:25px;padding-right: 3px ;"></li>
+                  <li class="lilist"><a href="#" class="aclassRed pull-left">Mar 2018</a> <img src="assets/img/red.png"
+                      alt="Logo" class="pull-right" style="width:25px;height:25px;padding-right: 3px ;"></li>
+                  <li class="lilist"><a class="aclassDis pull-left">Feb 2018 </a></li>
+
+                </ul>
+
+              </div>
+            </div>
+          </div>
+        </td>
+        <td style="width: 75%;max-width: 400px;vertical-align: top">
+          <div class="card" style="width:100%;box-shadow: 5px 5px 7px rgba(33,33,33,.7);margin-left: 10px;max-height: 350px">
+            <div _ngcontent-c4="" class="card-header" style="font-weight: 600;font-size: 17px;width: 100%;"> My Feed
+            </div>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-sm-5">
+                  <!-- <h4 class="card-title mb-0">Traffic</h4>
+          <div class="small text-muted">November 2017</div> -->
+                </div>
+                <!--/.col-->
+                <!-- <div class="col-sm-7 d-none d-md-block">
+             <button type="button" class="btn btn-primary float-right"><i class="icon-cloud-download"></i></button> 
+            <div class="btn-group btn-group-toggle float-right mr-3" data-toggle="buttons">
+ <label class="btn btn-outline-secondary" [(ngModel)]="radioModel" btnRadio="Day" id="option1">Day</label> 
+              <label class="btn btn-outline-secondary" [(ngModel)]="radioModel" btnRadio="Month" id="option2">Month</label>
+               <label class="btn btn-outline-secondary" [(ngModel)]="radioModel" btnRadio="Year" id="option3">Year</label> 
+            </div>
+          </div> -->
+                <!--/.col-->
+              </div>
+              <!--/.row-->
+
+              <div class="chart-wrapper col-lg-12 " style="max-height:340px;margin-top:10px;width: auto">
+                <!-- <canvas baseChart class="chart" [datasets]="barChart1Data" [labels]="barChart1Labels" [options]="barChart1Options"
+          [colors]="barChart1Colours" [legend]="barChart1Legend" [chartType]="barChart1Type"></canvas> -->
+
+                <canvas baseChart class="chart" [datasets]="barChart1Data" height="240" [labels]="barChart1Labels"
+                  [options]="barChart1Options" [colors]="barChart1Colours" [legend]="barChart1Legend" [chartType]="barChart1Type"></canvas>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="card" style="width:100%;box-shadow: 5px 5px 7px rgba(33,33,33,.7);margin-left: 10px;right: 0;min-height: 200px;">
+            <div _ngcontent-c4="" class="card-header" style="font-weight: 600;font-size: 17px;width: 100%;"> My Cards
+            </div>
+            <div class="card-body" style="width:100%;">
+              <table style="width:100%;">
+                <tbody style="width:100%;">
+                  <tr style="width:100%;">
+                    <td style="width:50%;">
+                      <div style="border-right: rgba(33,33,33,.7) 1px solid;text-align: center;">
+                        <div><img src="assets/img/Lik.png" alt="Logo" style="width:50px;height:50px;padding-right: 3px ;"></div>
+                        <div class="text-value">89</div>
+                      </div>
+                    </td>
+                    <td style="width:50%;">
+                      <div style="text-align: center;">
+                        <div><img src="assets/img/dislik.png" alt="Logo" style="width:50px;height:50px;padding-right: 3px ;"></div>
+                        <div class="text-value">50</div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+          </div>
+        </td>
+        <!-- </div> -->
+
+      </tr>
+    </tbody>
+  </table>
+</div>

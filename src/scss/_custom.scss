@@ -1,0 +1,159 @@
+// Here you can add other styles
+.app-header{
+        position: relative;
+    flex-direction: row;
+    height: 55px;
+    padding: 0;
+    margin: 0;
+    background-color: #fff;
+    border-bottom: 1px solid #c8ced3;
+    margin-top: 25px;
+}
+
+.btn-group button {
+  background-color: #4CAF50; /* Green background */
+  border: 1px solid green; /* Green border */
+  color: white; /* White text */
+  padding: 10px 24px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+//   width: 50%; /* Set a width if needed */
+  display: block; /* Make the buttons appear below each other */
+}
+
+.btn-group button:not(:last-child) {
+  border-bottom: none; /* Prevent double borders */
+}
+
+/* Add a background color on hover */
+.btn-group button:hover {
+  background-color: #3e8e41;
+}
+
+.sidebar .nav-link.active {
+        color: black;
+    background: white;
+    // border: grey 1px solid;
+    border-radius: 5px;
+font-family: cabrito-sans-extended;
+box-shadow: 1px 1px gray;
+margin: 5px;
+ transform: scale(1.25, 1.25);
+}
+.sidebar .nav-link {
+        color: black;
+    background: white;
+    // border: gray 1px solid;
+    border-radius: 5px;
+margin: 5px;
+ 
+}
+.sidebar .nav-link.active:hover {
+       opacity: 1;
+
+    /** default is 1, scale it to 1.5 */
+    transform: scale(1.25, 1.25);
+    box-shadow: 2px 2px gray;
+     background-color: white;
+    z-index: 999999999;
+
+}
+.sidebar .nav-link:hover {
+       opacity: 1;
+
+    /** default is 1, scale it to 1.5 */
+    transform: scale(1.25, 1.25);
+    box-shadow: 2px 2px gray;
+    background-color: white;
+    z-index: 999999999;
+    color: black;
+}
+.sidebar{
+    display: block
+}
+.sidebar-nav {
+    border: none !important;
+    margin-top: 5px;
+}
+
+.lilist{
+        // border: grey 1px solid;
+    border-radius: 5px;
+    height: 32px;
+    text-align: center;
+    font-weight: 500;
+    margin: 5px;
+    padding-left: 1px
+}
+
+.aclass{
+    color: black;
+    padding-left: 10px;
+     text-align: center;
+       vertical-align: center;
+          margin-top: 2px;
+}
+.aclassRed{
+    color: black;
+    padding-left: 10px;
+     text-align: center;
+       vertical-align: center;
+          margin-top: 2px;
+}
+.aclassDis{
+    color: black;
+    padding-left: 10px;
+     text-align: center;
+       vertical-align: center;
+       margin-top: 2px;
+}
+.lilist:hover{
+      opacity: 1;
+
+    /** default is 1, scale it to 1.5 */
+    transform: scale(1.25, 1.25);
+    box-shadow: 2px 2px gray;
+    background-color: white;
+    z-index: 999999999;
+    vertical-align: center;
+}
+
+.columnmain {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+
+.column {
+  float: right;
+  width: 70%;
+  padding: 0 10px;
+}
+
+.marquee-content-items {
+  display: inline-block;
+  padding: 0px;
+  margin: 0;
+  height: 40px;
+  position: relative;
+}
+
+.marquee-content-items li {
+    display: inline-block;
+    line-height: 29px;
+    color: #fff;
+    font-weight: bolder;
+    font-size: 15px;
+}
+
+.marquee-content-items li:after {
+  content: "|";
+  margin: 0 1em;
+}
+
+.marquee,
+*[class^="marquee"] {
+  display: inline-block;
+  white-space: nowrap;
+  position: absolute;
+  
+}
