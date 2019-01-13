@@ -215,19 +215,19 @@ export class DashboardComponent implements OnInit {
   };
   public barChart1Colours: Array<any> = [
     {
-      backgroundColor: 'blue',
+      backgroundColor: '#F5F5F5',
       borderWidth: 0
     },
     { // 1st Year.
-      backgroundColor: 'green',
+      backgroundColor: '#D3D3D3',
       borderWidth: 0
     },
     { // 2nd Year.
-      backgroundColor: 'yellow',
+      backgroundColor: '#BEBEBE',
       borderWidth: 0
     },
     { // 2nd Year.
-      backgroundColor: 'red',
+      backgroundColor: '#808080',
       borderWidth: 0
     }
   ];

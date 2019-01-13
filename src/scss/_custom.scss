@@ -32,6 +32,7 @@
 .sidebar .nav-link.active {
         color: black;
     background: white;
+    text-align: center;
     // border: grey 1px solid;
     border-radius: 5px;
 font-family: cabrito-sans-extended;
@@ -49,7 +50,7 @@ margin: 5px;
 }
 .sidebar .nav-link.active:hover {
        opacity: 1;
-
+text-align: center;
     /** default is 1, scale it to 1.5 */
     transform: scale(1.25, 1.25);
     box-shadow: 2px 2px gray;
@@ -59,7 +60,7 @@ margin: 5px;
 }
 .sidebar .nav-link:hover {
        opacity: 1;
-
+text-align: center;
     /** default is 1, scale it to 1.5 */
     transform: scale(1.25, 1.25);
     box-shadow: 2px 2px gray;
@@ -79,7 +80,8 @@ margin: 5px;
         // border: grey 1px solid;
     border-radius: 5px;
     height: 32px;
-    text-align: center;
+    vertical-align: center;
+    padding-top: 2px;
     font-weight: 500;
     margin: 5px;
     padding-left: 1px
@@ -88,21 +90,21 @@ margin: 5px;
 .aclass{
     color: black;
     padding-left: 10px;
-     text-align: center;
+    
        vertical-align: center;
           margin-top: 2px;
 }
 .aclassRed{
     color: black;
     padding-left: 10px;
-     text-align: center;
+   
        vertical-align: center;
           margin-top: 2px;
 }
 .aclassDis{
     color: black;
     padding-left: 10px;
-     text-align: center;
+    
        vertical-align: center;
        margin-top: 2px;
 }
@@ -111,10 +113,13 @@ margin: 5px;
 
     /** default is 1, scale it to 1.5 */
     transform: scale(1.25, 1.25);
-    box-shadow: 2px 2px gray;
+    box-shadow: 5px 5px 7px rgba(33,33,33,.7);
     background-color: white;
     z-index: 999999999;
     vertical-align: center;
+    padding-top: 5px;
+      padding-left: 2px;
+      padding-right: 3px;
 }
 
 .columnmain {
