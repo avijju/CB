@@ -1,19 +1,20 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-
+// import { DashboardComponent } from './views/dashboard/dashboard.component'
 // Import Containers
-import { DefaultLayoutComponent } from './containers';
-
+// import { DefaultLayoutComponent } from './containers';
+// import { ButtonsModule } from './views/buttons/buttons.module'
 import { P404Component } from './views/error/404.component';
 import { P500Component } from './views/error/500.component';
 import { LoginComponent } from './views/login/login.component';
 import { RegisterComponent } from './views/register/register.component';
-
+import { PepComponent } from './views/pep/pep.component';
+import { DashComponent } from './views/dash/dash.component'
 export const routes: Routes = [
   {
     path: '',
-    redirectTo: 'dashboard',
-    pathMatch: 'full',
+    component: DashComponent,
+
   },
   {
     path: '404',
@@ -30,10 +31,10 @@ export const routes: Routes = [
     }
   },
   {
-    path: 'login',
-    component: LoginComponent,
+    path: 'pep',
+    component: PepComponent,
     data: {
-      title: 'Login Page'
+      title: 'PEP'
     }
   },
   {
@@ -43,51 +44,51 @@ export const routes: Routes = [
       title: 'Register Page'
     }
   },
-  {
-    path: '',
-    component: DefaultLayoutComponent,
-    data: {
-      title: 'Home'
-    },
-    children: [
-      {
-        path: 'base',
-        loadChildren: './views/base/base.module#BaseModule'
-      },
-      {
-        path: 'buttons',
-        loadChildren: './views/buttons/buttons.module#ButtonsModule'
-      },
-      {
-        path: 'charts',
-        loadChildren: './views/chartjs/chartjs.module#ChartJSModule'
-      },
-      {
-        path: 'dashboard',
-        loadChildren: './views/dashboard/dashboard.module#DashboardModule'
-      },
-      {
-        path: 'icons',
-        loadChildren: './views/icons/icons.module#IconsModule'
-      },
-      {
-        path: 'notifications',
-        loadChildren: './views/notifications/notifications.module#NotificationsModule'
-      },
-      {
-        path: 'theme',
-        loadChildren: './views/theme/theme.module#ThemeModule'
-      },
-      {
-        path: 'widgets',
-        loadChildren: './views/widgets/widgets.module#WidgetsModule'
-      }
-    ]
-  }
+  // {
+  //   path: '',
+  //   component: DefaultLayoutComponent,
+  //   data: {
+  //     title: 'Home'
+  //   },
+  //   children: [
+  //     {
+  //       path: 'pepss',
+  //       // loadChildren: './views/base/base.module#ButtonsModule'
+  //     },
+  //     {
+  //       path: 'buttons',
+  //       // loadChildren: './views/buttons/buttons.module#ButtonsModule'
+  //     },
+  //     {
+  //       path: 'charts',
+  //       loadChildren: './views/chartjs/chartjs.module#ChartJSModule'
+  //     },
+  //     {
+  //       path: 'dashboard',
+  //       loadChildren: './views/dashboard/dashboard.module#DashboardModule'
+  //     },
+  //     {
+  //       path: 'icons',
+  //       loadChildren: './views/icons/icons.module#IconsModule'
+  //     },
+  //     {
+  //       path: 'notifications',
+  //       loadChildren: './views/notifications/notifications.module#NotificationsModule'
+  //     },
+  //     {
+  //       path: 'theme',
+  //       loadChildren: './views/theme/theme.module#ThemeModule'
+  //     },
+  //     {
+  //       path: 'widgets',
+  //       loadChildren: './views/widgets/widgets.module#WidgetsModule'
+  //     }
+  //   ]
+  // }
 ];
 
 @NgModule({
-  imports: [ RouterModule.forRoot(routes) ],
-  exports: [ RouterModule ]
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

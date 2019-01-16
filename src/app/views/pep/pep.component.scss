@@ -1,0 +1,66 @@
+.mat-table {
+    display: table;
+    width: 100%;
+
+    > .mat-header-row, > .mat-row {
+        display: table-row;
+        padding: 0;
+        border: none;
+        text-align: left;
+          font-family:'Brandon Grotesque Black';
+    font-size: 13px;
+        > .mat-header-cell, > .mat-cell {
+            display: table-cell;
+            min-height: 5px;
+            // vertical-align: top;
+            padding: 5px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+            
+        }
+        
+
+    
+    }
+}
+
+ .mat-header-row{ min-height: 2px; }
+::ng-deep .mat-sort-header-container {
+    display:flex;
+    justify-content:center;
+    
+  }
+.tooltipss {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+.tooltipss .tooltiptextss {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+}
+.toolbar-dialog .mat-dialog-container {
+    padding: 0 !important;
+    z-index: 3000 !important;
+  }
+
+  /deep/ .cdk-overlay-container {
+    z-index: 1200 !important;
+  }
+ //bs-datepicker-container { z-index: 3000; }
+ //.mat-calendar{z-index: 3000;}
+.tooltipss:hover .tooltiptext {
+    visibility: visible;
+}
+.cdk-global-overlay-wrapper, .cdk-overlay-container {
+    z-index: 99999 !important;
+  }

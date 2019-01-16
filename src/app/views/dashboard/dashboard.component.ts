@@ -4,6 +4,7 @@ import { getStyle, hexToRgba } from '@coreui/coreui/dist/js/coreui-utilities';
 import { CustomTooltips } from '@coreui/coreui-plugin-chartjs-custom-tooltips';
 
 @Component({
+  selector: 'dashboard',
   templateUrl: 'dashboard.component.html'
 })
 export class DashboardComponent implements OnInit {
@@ -215,19 +216,19 @@ export class DashboardComponent implements OnInit {
   };
   public barChart1Colours: Array<any> = [
     {
-      backgroundColor: '#F5F5F5',
-      borderWidth: 0
-    },
-    { // 1st Year.
       backgroundColor: '#D3D3D3',
       borderWidth: 0
     },
-    { // 2nd Year.
+    { // 1st Year.
       backgroundColor: '#BEBEBE',
       borderWidth: 0
     },
     { // 2nd Year.
       backgroundColor: '#808080',
+      borderWidth: 0
+    },
+    { // 2nd Year.
+      backgroundColor: '#202020',
       borderWidth: 0
     }
   ];

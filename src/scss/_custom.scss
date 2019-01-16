@@ -31,36 +31,46 @@
 
 .sidebar .nav-link.active {
         color: black;
-    background: white;
+    background: #fff;
     text-align: left;
-    font-size: 1.4rem;
-    // font-weight: 900;
-    // border: grey 1px solid;
-    // border-radius: 5px;
-// font-family: cabrito-sans-extended;
-// box-shadow: 1px 1px gray;
-margin: 5px;
-//  transform: scale(1.25, 1.25);
+    border-bottom: #575656 1px solid;
+    border-radius: 5px;
+    margin: 5px;
+    margin-left: 5px;
+    font-size: 16px;
+    font-weight: 1200;
+    // transform: scale(1.25, 1.25);
+    font-family:'Brandon Grotesque Black';
 }
 .sidebar .nav-link {
-        color: black;
-    background: white;
-    // border: gray 1px solid;
+     color: black;
+    background: #fff;
+    border-bottom: grey 1px solid;
     border-radius: 5px;
-margin: 5px;
-
-font-size: 1.2rem;
+    margin: 5px;
+    margin-left: 5px;
+    font-size: 14px;
+   font-weight: 1200;
+    text-align: left;
+    // transform: scale(1.25, 1.25);
+    font-family:'Brandon Grotesque Light Italic';
  
 }
 .sidebar .nav-link.active:hover {
-       opacity: 1;
-// text-align: center;
+         opacity: 1;
+     text-align: left;
     /** default is 1, scale it to 1.5 */
     // transform: scale(1.25, 1.25);
-    // box-shadow: 2px 2px gray;
-     background-color: white;
+    // background: #d42e12;
+   border-bottom: #575656 1px solid;
+   border-radius: 5px;
+    margin: 5px;
+    margin-left: 5px;
+    font-size: 16px;
+    font-weight: 1200;
     z-index: 999999999;
-    font-size: 1.4rem;
+    // color: rgb(247, 242, 242);
+    font-family:'Brandon Grotesque Light Italic';
     
 
 }
@@ -86,8 +96,11 @@ font-size: 1.2rem;
 
 .lilist{
         // border: grey 1px solid;
-    border-radius: 5px;
+     border-radius: 5px;
     height: 32px;
+    font-family:'Brandon Grotesque Black';
+    font-size: 13px;
+    color:black;
     vertical-align: center;
     padding-top: 2px;
     font-weight: 500;
@@ -170,3 +183,85 @@ font-size: 1.2rem;
   position: absolute;
   
 }
+
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+.basic-container {
+  padding: 5px;
+}
+
+.version-info {
+  font-size: 8pt;
+  float: right;
+}
+
+.example-container {
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
+  }
+  
+  .example-header {
+    min-height: 64px;
+    padding: 8px 24px 0;
+  }
+  
+  .mat-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
+  
+  .mat-table {
+    overflow: auto;
+    max-height: 500px;
+  }
+  
+
+.PanelCard
+{
+    position: relative;
+    display: flex;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid #c8ced3;
+    border-radius: 0.25rem;
+}
+.required{
+    color: red;
+}
+
+.FlashPosition {
+    position: fixed;
+    max-width: 100%;
+    top: 5px;
+    right: 5px;
+    z-index: 1041;
+}
+
+.MediumClass {
+    position: fixed;
+    top: 9px;
+    right: 15px;
+    width: 100px;
+    z-index: 1040;
+}
+
+.PanelShadow
+{
+  -webkit-box-shadow: 0 8px 11px #777;
+  -moz-box-shadow: 0 8px 11px #777;
+  box-shadow: 0 8px 11px #777;
+
+}
+
+
+
+.flexdiv
+{
+  display:flex;
+}
+

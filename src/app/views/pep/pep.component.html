@@ -1,11 +1,12 @@
-<div class="row card card-accent-primary PanelShadow" style="margin-top:25px;" *ngIf="showPlanResultsPanel">
+<!-- PEP - Nikhil Gupta -->
+<div class="row card card-accent-primary PanelShadow" style="margin-top:25px;margin-right: -40px" *ngIf="showPlanResultsPanel">
   <div class="card-header">
     <!-- <div flex="100" layout="column"> -->
     <!-- <div style="font-size: 10px; color: blue;" label ng-bind="::dateFields[2].label"></div> -->
     <input matInput [matDatepicker]="i" placeholder="Choose From Date" [attr.id]="dtPicker + i" style="width:70px;"
-      (dateInput)="ScheduleFromToDate($event)">
-    <mat-datepicker-toggle matSuffix [for]="i" md-mode="month"></mat-datepicker-toggle>
-    <mat-datepicker #i></mat-datepicker>
+      (dateInput)="ScheduleFromToDate($event)" [value]='Jan-2019'>
+    <mat-datepicker-toggle [for]="i" md-mode="month"></mat-datepicker-toggle>
+    <mat-datepicker #i startView="year"></mat-datepicker>
     <!-- <input matInput [min]="row.startDatess" [max]="endDate" [matDatepicker]="i" placeholder="Choose To Date"
         [attr.id]="dtPicker + i" style="width:70px;" [value]="row.endDatess" id="txtSchTo_{{j}}" (dateInput)="ScheduleFromToDate($event)">
       <mat-datepicker ng-model="dateFields.selectedDate" md-date-locale="dateFields.locale" md-mode="month"
@@ -13,7 +14,7 @@
       </mat-datepicker> -->
     <!-- </div>  -->
     <button (click)="createPlan()" mat-raised-button color="primary" class="pull-right">Create
-      Plan</button>
+      PEP</button>
   </div>
 
   <!-- <mat-form-field style="width: 94%;margin-top: 10px;margin-left: 25px;">

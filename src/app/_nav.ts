@@ -14,33 +14,33 @@ export const navItems = [
   // },
   {
     name: 'PEP',
-    url: '/theme/colors',
-    
+    url: '/pep',
+
   },
   {
     name: 'GC/RC',
     url: '/theme/typography',
-   
+
   },
   {
     name: 'Feed Forward',
     url: '/theme/typography',
-   
+
   },
   {
     name: 'Manager Dashboard',
     url: '/theme/colors',
-   
+
   },
   {
     name: 'HR Dashboard',
     url: '/theme/typography',
-    
+
   },
   {
     name: 'FAQ',
     url: '/theme/typography',
-    
+
   },
   // {
   //   title: true,

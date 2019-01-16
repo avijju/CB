@@ -1,20 +1,70 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<div style="background-color:#d42e12;height: 27px;position: fixed;z-index: 9999999" class="col-lg-12">
+  <button class="btn btn-info" style="position: fixed; height: 27px;text-align: center; line-height: 0;left: 0;border-radius: 0% ;z-index: 99999999999999999;background-color: #d42e12;margin-top: 0px;color: white;border-right: white 1px solid">
+    <strong>Happy
+      Birthday</strong>
+  </button>
+  <ng-marquee duration="30">
+    <mark style="background: transparent;color:white">
+      <ul class="marquee-content-items doemail">
+        <li><a email="mailto:Nikhil.Gupta@yoursite.com" style="color: white" href="mailto:Nikhil.Gupta@yoursite.com?subject=Happy%20Birthday&amp;body=Hey Buddy, %0D%0A%0D%0AWish you a very happy birthday. Stay blessed. %0D%0A%0D%0AThanks.">Nikhil
+            Gupta (12-Oct-2018)</a></li>
+        <li><a email="mailto:Suman.Shinde@yoursite.com" style="color: white" href="mailto:Suman.Shinde@yoursite.com?subject=Happy%20Birthday&amp;body=Hey Buddy, %0D%0A%0D%0AWish you a very happy birthday. Stay blessed. %0D%0A%0D%0AThanks.">Suman
+            Shinde (12-Oct-2018)</a></li>
+        <li><a email="mailto:Kuldeep.Sharma@yoursite.com" style="color: white" href="mailto:Kuldeep.Sharma@yoursite.com?subject=Happy%20Birthday&amp;body=Hey Buddy, %0D%0A%0D%0AWish you a very happy birthday. Stay blessed. %0D%0A%0D%0AThanks.">Kuldeep
+            Sharma (13-Oct-2018)</a></li>
+        <li><a email="mailto:Beena.Mavadia@yoursite.com" style="color: white" href="mailto:Beena.Mavadia@yoursite.com?subject=Happy%20Birthday&amp;body=Hey Buddy, %0D%0A%0D%0AWish you a very happy birthday. Stay blessed. %0D%0A%0D%0AThanks.">Beena
+            Mavadia (13-Oct-2018)</a></li>
+        <li><a email="mailto:Seema.Ranganathan@yoursite.com" style="color: white" href="mailto:Seema.Ranganathan@yoursite.com?subject=Happy%20Birthday&amp;body=Hey Buddy, %0D%0A%0D%0AWish you a very happy birthday. Stay blessed. %0D%0A%0D%0AThanks.">Seema
+            Ranganathan (14-Oct-2018)</a></li>
+      </ul>
+    </mark>
+  </ng-marquee>
 
+</div>
+
+<div style="background-color: #fff;height: 100px;position: fixed;z-index: 99999;margin-top: 25px" class="col-lg-2">
+  <div class="col-lg-2 pull-left" style="margin-top: 25px">
+    <img src="assets/img/logo.png" alt="Logo" style="width:200px;height:100px;">
+  </div>
+
+  <!-- <div class="col-lg-4 pull-right">
+    <ul class="nav navbar-nav ml-auto pull-right">
+
+      <li class="nav-item dropdown pull-right" dropdown placement="bottom right">
+        <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"
+          dropdownToggle (click)="false">
+          <img src="assets/img/avatars/pro.png" class="img-avatar" alt="admin@bootstrapmaster.com" style="width:50px;height:50px;" />
+        </a>
+        <div class="dropdown-menu dropdown-menu-right" *dropdownMenu aria-labelledby="simple-dropdown">
+
+          <a class="dropdown-item" href="#"><i class="fa fa-lock"></i> Logout</a>
+        </div>
+      </li>
+    </ul>
+  </div> -->
+</div>
+<div class="app-body" style="margin-top: 50px;background-color: white;margin-left: 20px;">
+  <app-sidebar [fixed]="true" [display]="'lg'" style="margin-top: 100px;background-color: white; border: none">
+    <app-sidebar-nav [navItems]="navItems" [perfectScrollbar] style="background-color: white;"></app-sidebar-nav>
+    <app-sidebar-minimizer></app-sidebar-minimizer>
+  </app-sidebar>
+  <ol class="breadcrumb">
+    <app-breadcrumb></app-breadcrumb>
+
+    <li class="breadcrumb-menu d-md-down-none">
+      <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+        <a class="btn" href="#"></a>
+        <a class="btn" [routerLink]="['/dashboard']"></a>
+        <a class="btn" href="#"></a>
+      </div>
+    </li>
+  </ol>
+  <div class="container-fluid" style="margin-left: 120px;margin-right: 50px;">
+    <router-outlet></router-outlet>
+  </div>
+
+</div>
+<!-- <app-footer>
+  <span>Avinash</span>
+  <span class="ml-auto">Powered by Avinash</span>
+</app-footer> -->
