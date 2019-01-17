@@ -67,7 +67,14 @@ export class DashComponent implements OnInit {
   ];
   public barChart1Legend = true;
   public barChart1Type = 'bar';
-  constructor() { }
+  constructor() {
+
+    // var ul = document.getElementsByClassName("nav");
+    // var items = ul.namedItem;
+    // for (var i = 0; i < items.length; ++i) {
+    //   console.log(items[i]);
+    // }
+  }
 
   ngOnInit() {
   }

@@ -1,3 +1,4 @@
+
 .mat-table {
     display: table;
     width: 100%;
@@ -7,28 +8,68 @@
         padding: 0;
         border: none;
         text-align: left;
-          font-family:'Brandon Grotesque Black';
-    font-size: 13px;
+         
         > .mat-header-cell, > .mat-cell {
-            display: table-cell;
+            // display: -ms-flexbox;
+            //  display: -webkit-flex;
             min-height: 5px;
-            // vertical-align: top;
+            vertical-align: middle;
             padding: 5px;
             border-bottom: 1px solid rgba(0, 0, 0, 0.12);
-            
+             display: table-cell;
+             border-right: 1px solid rgba(0, 0, 0, 0.12);
+    // -webkit-align-self: stretch;
+    // -ms-flex-item-align: stretch;
+    // align-self: stretch;
+    /* align-items center so that cell content is vertically centered */
+    // -webkit-align-items: center;
+    // -ms-flex-align: center;
+    // align-items: center;
         }
         
 
     
     }
 }
+.mat-row.hovered {
+  background: gray}
+.mat-cell.hoverd{
+    background:  gray;
+}
+// .mat-cell .flex-stretch {
+//     display: -ms-flexbox;
+//     display: -webkit-flex;
+//     display: flex;
+//     -webkit-align-self: stretch;
+//     -ms-flex-item-align: stretch;
+//     align-self: stretch;
+//     /* align-items center so that cell content is vertically centered */
+//     -webkit-align-items: center;
+//     -ms-flex-align: center;
+//     align-items: center;
+// }
+.mat-row {
+        min-height: 60px
+    }
+.mat-header-row{
+ font-family:'Brandon Grotesque Black';
+    font-size: 13px;
+}
 
- .mat-header-row{ min-height: 2px; }
-::ng-deep .mat-sort-header-container {
-    display:flex;
-    justify-content:center;
+// .mat-list-item.mat-list-item-word-wrap {
+//       height: initial !important;
+//     }
+//     .mat-list-item-word-wrap .mat-line {
+//       word-wrap: break-word !important; 
+//       white-space: pre-wrap !important;
+//     }
+
+//  .mat-header-row{ min-height: 2px; }
+// ::ng-deep .mat-sort-header-container {
+//     display:flex;
+//     justify-content:center;
     
-  }
+//   }
 .tooltipss {
     position: relative;
     display: inline-block;

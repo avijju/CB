@@ -38,7 +38,7 @@
     margin: 5px;
     margin-left: 5px;
     font-size: 16px;
-    font-weight: 1200;
+    font-weight: bolder;
     // transform: scale(1.25, 1.25);
     font-family:'Brandon Grotesque Black';
 }
@@ -104,7 +104,7 @@
     vertical-align: center;
     padding-top: 2px;
     font-weight: 500;
-    margin: 5px;
+    // margin: 5px;
     padding-left: 1px
 }
 
@@ -123,9 +123,9 @@
           margin-top: 2px;
 }
 .aclassDis{
-    color: black;
+    color: grey !important;
     padding-left: 10px;
-    
+    cursor: none !important;
        vertical-align: center;
        margin-top: 2px;
 }
@@ -265,3 +265,19 @@
   display:flex;
 }
 
+.mat-cell .flex-stretch {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-self: stretch;
+    -ms-flex-item-align: stretch;
+    align-self: stretch;
+    /* align-items center so that cell content is vertically centered */
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.mat-row.hovered {
+  background: #eee;
+}

@@ -13,6 +13,12 @@ import { DashComponent } from './views/dash/dash.component'
 export const routes: Routes = [
   {
     path: '',
+    redirectTo: 'Dash',
+    pathMatch: 'full'
+
+  },
+  {
+    path: 'Dash',
     component: DashComponent,
 
   },

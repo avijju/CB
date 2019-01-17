@@ -20,7 +20,7 @@ import { P500Component } from './views/error/500.component';
 import { LoginComponent } from './views/login/login.component';
 import { RegisterComponent } from './views/register/register.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatButtonModule } from '@angular/material';
+import { MatButtonModule, MatSelectModule } from '@angular/material';
 import {
   MatInputModule, MatRadioModule, MatPaginatorModule, MatProgressSpinnerModule, MatSlideToggleModule,
   MatSortModule, MatTableModule, MatTooltipModule, MatAutocompleteModule, MatCheckboxModule, MatExpansionModule, MatListModule, MatSidenavModule, MatIconModule, MatToolbarModule, MatGridListModule, MatStepperModule, MatDialogModule, MatDividerModule, MatDatepickerModule, MatNativeDateModule, MatCardModule
@@ -49,10 +49,14 @@ import { TabsModule } from 'ngx-bootstrap/tabs';
 import { ChartsModule } from 'ng2-charts/ng2-charts';
 import { PepComponent } from './views/pep/pep.component';
 // import { DashboardComponent } from './views/dashboard/dashboard.component';
-import { DashComponent } from './views/dash/dash.component'
+import { DashComponent } from './views/dash/dash.component';
+import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   imports: [
     BrowserModule,
+    OwlDateTimeModule,
+    OwlNativeDateTimeModule,
     AppRoutingModule,
     AppAsideModule,
     AppBreadcrumbModule.forRoot(),
@@ -67,7 +71,8 @@ import { DashComponent } from './views/dash/dash.component'
     MatInputModule, MatRadioModule, MatPaginatorModule, MatProgressSpinnerModule, MatSlideToggleModule,
     MatSortModule, MatTableModule, MatTooltipModule, MatAutocompleteModule, MatCheckboxModule
     , MatButtonModule, MatDatepickerModule, MatNativeDateModule, BrowserAnimationsModule,
-
+    ReactiveFormsModule, MatCardModule,
+    FormsModule, MatSelectModule
   ],
   declarations: [
     AppComponent,

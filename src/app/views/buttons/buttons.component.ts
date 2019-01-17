@@ -3,7 +3,7 @@ import { MatTableDataSource, MatDialog, MatButtonToggleGroup } from '@angular/ma
 @Component({
   templateUrl: 'buttons.component.html'
 })
-export class ButtonsComponent {
+export class ButtonsComponent implements OnInit{
   displayedColumns = ['#', 'PEPArea', 'EmployeeComments', 'ManagerComments'];
   dataSource: MatTableDataSource<any>;
   showPlanResultsPanel: boolean = true;
