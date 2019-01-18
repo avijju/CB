@@ -23,7 +23,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule, MatSelectModule } from '@angular/material';
 import {
   MatInputModule, MatRadioModule, MatPaginatorModule, MatProgressSpinnerModule, MatSlideToggleModule,
-  MatSortModule, MatTableModule, MatTooltipModule, MatAutocompleteModule, MatCheckboxModule, MatExpansionModule, MatListModule, MatSidenavModule, MatIconModule, MatToolbarModule, MatGridListModule, MatStepperModule, MatDialogModule, MatDividerModule, MatDatepickerModule, MatNativeDateModule, MatCardModule
+  MatSortModule, MatTableModule,MatTabsModule, MatTooltipModule, MatAutocompleteModule, MatCheckboxModule, MatExpansionModule, MatListModule, MatSidenavModule, MatIconModule, MatToolbarModule, MatGridListModule, MatStepperModule, MatDialogModule, MatDividerModule, MatDatepickerModule, MatNativeDateModule, MatCardModule
 }
   from "@angular/material";
 // const APP_CONTAINERS = [
@@ -52,6 +52,8 @@ import { PepComponent } from './views/pep/pep.component';
 import { DashComponent } from './views/dash/dash.component';
 import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { GcComponent } from './views/gc/gc.component';
+
 @NgModule({
   imports: [
     BrowserModule,
@@ -72,7 +74,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MatSortModule, MatTableModule, MatTooltipModule, MatAutocompleteModule, MatCheckboxModule
     , MatButtonModule, MatDatepickerModule, MatNativeDateModule, BrowserAnimationsModule,
     ReactiveFormsModule, MatCardModule,
-    FormsModule, MatSelectModule
+    FormsModule, MatSelectModule,MatTabsModule
   ],
   declarations: [
     AppComponent,
@@ -82,7 +84,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     LoginComponent,
     RegisterComponent,
     PepComponent,
-    DashComponent
+    DashComponent,
+    GcComponent,
+    
   ],
   providers: [{
     provide: LocationStrategy,

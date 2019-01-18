@@ -19,7 +19,7 @@ export const navItems = [
   },
   {
     name: 'GC/RC',
-    url: '/theme/typography',
+    url: '/GC',
 
   },
   {

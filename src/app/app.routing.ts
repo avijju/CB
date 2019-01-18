@@ -9,7 +9,8 @@ import { P500Component } from './views/error/500.component';
 import { LoginComponent } from './views/login/login.component';
 import { RegisterComponent } from './views/register/register.component';
 import { PepComponent } from './views/pep/pep.component';
-import { DashComponent } from './views/dash/dash.component'
+import { DashComponent } from './views/dash/dash.component';
+import { GcComponent } from './views/gc/gc.component'
 export const routes: Routes = [
   {
     path: '',
@@ -44,8 +45,8 @@ export const routes: Routes = [
     }
   },
   {
-    path: 'register',
-    component: RegisterComponent,
+    path: 'GC',
+    component: GcComponent,
     data: {
       title: 'Register Page'
     }
