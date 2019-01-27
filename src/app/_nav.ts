@@ -22,11 +22,11 @@ export const navItems = [
     url: '/GC',
 
   },
-  {
-    name: 'Register',
-    url: '/REG',
+  // {
+  //   name: 'Register',
+  //   url: '/REG',
 
-  },
+  // },
   {
     name: 'Employe List',
     url: '/lst',
