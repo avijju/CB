@@ -11,6 +11,8 @@ import { RegisterComponent } from './views/register/register.component';
 import { PepComponent } from './views/pep/pep.component';
 import { DashComponent } from './views/dash/dash.component';
 import { GcComponent } from './views/gc/gc.component'
+import{EmpregisterComponent} from './views/empregister/empregister.component'
+import{EmplistComponent} from './views/emplist/emplist.component'
 export const routes: Routes = [
   {
     path: '',
@@ -21,6 +23,16 @@ export const routes: Routes = [
   {
     path: 'Dash',
     component: DashComponent,
+
+  },
+  {
+    path: 'REG',
+    component: EmpregisterComponent,
+
+  },
+  {
+    path: 'lst',
+    component: EmplistComponent,
 
   },
   {

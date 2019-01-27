@@ -53,6 +53,9 @@ import { DashComponent } from './views/dash/dash.component';
 import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { GcComponent } from './views/gc/gc.component';
+import { EmpregisterComponent } from './views/empregister/empregister.component';
+import { EmplistComponent } from './views/emplist/emplist.component';
+import {DataTableModule} from "angular2-datatable";
 
 @NgModule({
   imports: [
@@ -74,7 +77,7 @@ import { GcComponent } from './views/gc/gc.component';
     MatSortModule, MatTableModule, MatTooltipModule, MatAutocompleteModule, MatCheckboxModule
     , MatButtonModule, MatDatepickerModule, MatNativeDateModule, BrowserAnimationsModule,
     ReactiveFormsModule, MatCardModule,
-    FormsModule, MatSelectModule,MatTabsModule
+    FormsModule, MatSelectModule, MatTabsModule, DataTableModule, 
   ],
   declarations: [
     AppComponent,
@@ -86,6 +89,8 @@ import { GcComponent } from './views/gc/gc.component';
     PepComponent,
     DashComponent,
     GcComponent,
+    EmpregisterComponent,
+    EmplistComponent,
     
   ],
   providers: [{

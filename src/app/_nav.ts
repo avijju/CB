@@ -23,6 +23,16 @@ export const navItems = [
 
   },
   {
+    name: 'Register',
+    url: '/REG',
+
+  },
+  {
+    name: 'Employe List',
+    url: '/lst',
+
+  },
+  {
     name: 'Feed Forward',
     url: '/theme/typography',
 
