@@ -72,31 +72,31 @@
           <form [formGroup]="PlanFormGroup">
             <mat-card>
               <mat-form-field>
-                <input matInput placeholder="Year Month:" formControlName="market" [owlDateTimeTrigger]="dt1" [min]="min"
-                  [max]="max" [owlDateTime]="dt1" [formControl]="dateTime" style="width: 100%">
+                <input matInput placeholder="Year Month:" formControlName="market1" [owlDateTimeTrigger]="dt1"
+                  [owlDateTime]="dt1" [formControl]="dateTime" style="width: 100%">
                 <owl-date-time [pickerType]="'calendar'" [startView]="'year'" (yearSelected)="chosenYearHandler($event)"
                   (monthSelected)="chosenMonthHandler($event, dt1)" #dt1="owlDateTime"></owl-date-time>
               </mat-form-field>
 
               <mat-form-field>
-                <mat-select placeholder="PEP Area" formControlName="printFormat" [(ngModel)]="printFormat">
+                <mat-select placeholder="Employee Name" formControlName="printFormat1" [(ngModel)]="printFormat">
                   <mat-option [value]="">Please select Employee</mat-option>
                   <mat-option [value]="1">Nikhil Guptha</mat-option>
                   <!-- <mat-option [value]="">Behaviours</mat-option> -->
                 </mat-select>
               </mat-form-field>
               <mat-form-field>
-                <input matInput placeholder="Core Value" formControlName="objective2" [(ngModel)]="CoreValue">
+                <input matInput placeholder="Core Value" formControlName="objective21" [(ngModel)]="CoreValue">
                 <!-- <textarea matInput disabled [(ngModel)]="ManagersComments" #message maxlength="256" placeholder="Managers Comments"></textarea> -->
                 <!-- <mat-hint align="end">{{message.value.length}} / 256</mat-hint> -->
               </mat-form-field>
               <mat-form-field>
-                <input matInput placeholder="Mindset" formControlName="objective3" [(ngModel)]="Mindset">
+                <input matInput placeholder="Mindset" formControlName="objective31" [(ngModel)]="Mindset">
                 <!-- <textarea matInput disabled [(ngModel)]="ManagersComments" #message maxlength="256" placeholder="Managers Comments"></textarea> -->
                 <!-- <mat-hint align="end">{{message.value.length}} / 256</mat-hint> -->
               </mat-form-field>
               <mat-form-field>
-                <textarea matInput [(ngModel)]="Performance" #message maxlength="256" formControlName="objective1"
+                <textarea matInput [(ngModel)]="Performance" #message maxlength="256" formControlName="objective11"
                   placeholder="Performance" disabled></textarea>
 
               </mat-form-field>

@@ -56,6 +56,7 @@ import { GcComponent } from './views/gc/gc.component';
 import { EmpregisterComponent } from './views/empregister/empregister.component';
 import { EmplistComponent } from './views/emplist/emplist.component';
 import {DataTableModule} from "angular2-datatable";
+import { FeedforComponent } from './views/feedfor/feedfor.component';
 
 @NgModule({
   imports: [
@@ -91,6 +92,7 @@ import {DataTableModule} from "angular2-datatable";
     GcComponent,
     EmpregisterComponent,
     EmplistComponent,
+    FeedforComponent,
     
   ],
   providers: [{

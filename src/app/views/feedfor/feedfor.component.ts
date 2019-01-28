@@ -1,5 +1,4 @@
 
-
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { MatTableDataSource, MatDialog, MatButtonToggleGroup } from '@angular/material';
 import { FormControl, FormGroup, FormBuilder, Validators } from '@angular/forms';
@@ -18,7 +17,7 @@ import { AngularWaitBarrier } from 'blocking-proxy/built/lib/angular_wait_barrie
 
 
 const moment = (_moment as any).default ? (_moment as any).default : _moment;
-export const MY_MOMENT_DATE_TIME_FORMATS1: OwlDateTimeFormats = {
+export const MY_MOMENT_DATE_TIME_FORMATS2: OwlDateTimeFormats = {
   parseInput: 'MMM/YYYY',
   fullPickerInput: 'l LT',
   datePickerInput: 'MMM/YYYY',
@@ -28,19 +27,19 @@ export const MY_MOMENT_DATE_TIME_FORMATS1: OwlDateTimeFormats = {
   monthYearA11yLabel: 'MMMM YYYY',
 };
 @Component({
-  selector: 'app-gc',
-  templateUrl: './gc.component.html',
-  styleUrls: ['./gc.component.scss'],
+  selector: 'app-feedfor',
+  templateUrl: './feedfor.component.html',
+  styleUrls: ['./feedfor.component.scss'],
   providers: [
     // `MomentDateTimeAdapter` and `OWL_MOMENT_DATE_TIME_FORMATS` can be automatically provided by importing
     // `OwlMomentDateTimeModule` in your applications root module. We provide it at the component level
     // here, due to limitations of our example generation script.
     { provide: DateTimeAdapter, useClass: MomentDateTimeAdapter, deps: [OWL_DATE_TIME_LOCALE] },
 
-    { provide: OWL_DATE_TIME_FORMATS, useValue: MY_MOMENT_DATE_TIME_FORMATS1 },
+    { provide: OWL_DATE_TIME_FORMATS, useValue: MY_MOMENT_DATE_TIME_FORMATS2 },
   ],
 })
-export class GcComponent implements OnInit {
+export class FeedforComponent implements OnInit {
   public dateTime = new FormControl(moment());
   PlanFormGroup: FormGroup;
   CoreValue: any;
@@ -51,44 +50,14 @@ export class GcComponent implements OnInit {
 
   ngOnInit() {
     this.PlanFormGroup = this._formBuilder.group({
-      market1: ['', Validators.required],
+      market: ['', Validators.required],
+      objective: ['', Validators.required],
       objective1: ['', Validators.required],
-      objective11: ['', Validators.required],
-      objective21: ['', Validators.required],
-      objective31: ['', Validators.required],
-      printFormat1: ['', Validators.required],
+      objective2: ['', Validators.required],
+      objective3: ['', Validators.required],
+      objective4: ['', Validators.required],
+      printFormat: ['', Validators.required],
     });
-    $(".tableCustom").find("tr").find("td.cardHover").click(function () {
-      $(".cardSelected").removeClass("cardSelected");
-      $(this).addClass("cardSelected");
-
-      //close_modal
-
-
-    });
-
   }
-  anotherfunction() {
-    this.Performance = $(".tableCustom").find("td.cardSelected").text();
-    this.Mindset = $(".tableCustom").find("td.cardSelected").closest("tr").find("td.cardMindset").text();
-    this.CoreValue = $(".tableCustom").find("td.cardSelected").closest("tr").find("td.cardCoreValue").text();
 
-    if (this.CoreValue == "") {
-      this.CoreValue = $(".tableCustom").find("td.cardSelected").closest("tr").prev("tr").find("td.cardCoreValue").text();
-    }
-
-    this.printFormat = 1;
-    var link = document.getElementById('close_modal');
-    link.click();
-  }
-  yourFn($event) {
-    debugger
-    console.log($event);
-
-    if ($event.index == 2) {
-      var link = document.getElementById('modal_show');
-      link.click();
-
-    }
-  }
 }

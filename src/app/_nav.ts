@@ -34,7 +34,7 @@ export const navItems = [
   },
   {
     name: 'Feed Forward',
-    url: '/theme/typography',
+    url: '/Feed',
 
   },
   {

@@ -1,0 +1,250 @@
+<mat-tab-group>
+  <mat-tab>
+    <ng-template mat-tab-label>
+      Receive (<span style=" color: green">5-</span>
+      <span style="color: red">3</span>)
+    </ng-template>
+    <div class="table-responsive">
+      <table class="table table-striped table-bordered table-hover tablecustomFF">
+        <tbody>
+          <tr>
+            <td><span class="vertical-text">Consider</span></td>
+            <td>
+              <div class="row rowcustom">
+                <span class="header col-xs-4 col-sm-4 col-md-4 statuscolorR">Waiting</span>
+                <span class="header col-xs-4 col-sm-4 col-md-4">Received from - Nikhil Gupta</span>
+                <span class="header col-xs-4 col-sm-4 col-md-4">Date Time - 12/11/2018 11:30:34</span>
+              </div>
+              <div class="row rowcustom">
+                <span class="details col-xs-12 col-sm-12 col-md-12">Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
+                  Lorem
+                  Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem <a
+                    href="#" class="readMoreReceive">Read More</a></span>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><span class="vertical-text">Continue</span></td>
+            <td>
+              <div class="row rowcustom">
+                <span class="header col-xs-4 col-sm-4 col-md-4 statuscolorG">Completed</span>
+                <span class="header col-xs-4 col-sm-4 col-md-4">Received from - Nikhil Gupta</span>
+                <span class="header col-xs-4 col-sm-4 col-md-4">Date Time - 12/11/2018 11:30:34</span>
+              </div>
+              <div class="row rowcustom">
+                <span class="details col-xs-12 col-sm-12 col-md-12">Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
+                  Lorem
+                  Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem <a
+                    href="#" class="readMoreReceive">Read More</a></span>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </mat-tab>
+  <mat-tab>
+    <ng-template mat-tab-label>
+      Given (2 - 1)
+    </ng-template>
+    <div class="table-responsive">
+      <table class="table table-striped table-bordered table-hover tablecustomFF">
+        <tbody>
+          <tr>
+            <td><span class="vertical-text">Consider</span></td>
+            <td>
+              <div class="row rowcustom">
+                <span class="header col-xs-4 col-sm-4 col-md-4 statuscolorR">Waiting</span>
+                <span class="header col-xs-4 col-sm-4 col-md-4">Received from - Nikhil Gupta</span>
+                <span class="header col-xs-4 col-sm-4 col-md-4">Date Time - 12/11/2018 11:30:34</span>
+              </div>
+              <div class="row rowcustom">
+                <span class="details col-xs-12 col-sm-12 col-md-12">Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
+                  Lorem
+                  Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem <a
+                    href="#" class="readMoreReceive">Read More</a></span>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><span class="vertical-text">Continue</span></td>
+            <td>
+              <div class="row rowcustom">
+                <span class="header col-xs-4 col-sm-4 col-md-4 statuscolorG">Completed</span>
+                <span class="header col-xs-4 col-sm-4 col-md-4">Received from - Nikhil Gupta</span>
+                <span class="header col-xs-4 col-sm-4 col-md-4">Date Time - 12/11/2018 11:30:34</span>
+              </div>
+              <div class="row rowcustom">
+                <span class="details col-xs-12 col-sm-12 col-md-12">Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
+                  Lorem
+                  Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem <a
+                    href="#" class="readMoreReceive">Read More</a></span>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </mat-tab>
+  <mat-tab>
+    <ng-template mat-tab-label>
+      Give (Request)
+    </ng-template>
+    <div class="card-body">
+      <div class="row">
+        <div class="text-center col-md-12">
+          <form [formGroup]="PlanFormGroup">
+            <mat-card>
+              <mat-form-field>
+                <input matInput placeholder="Year Month:" formControlName="market" [owlDateTimeTrigger]="dt1"
+                  [owlDateTime]="dt1" [formControl]="dateTime" style="width: 100%">
+                <owl-date-time [pickerType]="'calendar'" [startView]="'year'" (yearSelected)="chosenYearHandler($event)"
+                  (monthSelected)="chosenMonthHandler($event, dt1)" #dt1="owlDateTime"></owl-date-time>
+              </mat-form-field>
+
+              <mat-form-field>
+                <mat-select placeholder="Requested By" formControlName="printFormat" [(ngModel)]="printFormat">
+                  <mat-option [value]="">Please select Employee</mat-option>
+                  <mat-option [value]="1">Nikhil Guptha</mat-option>
+                  <!-- <mat-option [value]="">Behaviours</mat-option> -->
+                </mat-select>
+              </mat-form-field>
+              <mat-form-field>
+                <input matInput placeholder="" style="display: none">
+                <mat-radio-group formControlName="objective1">
+                  <mat-radio-button value="1" style="margin: 10px">Consider</mat-radio-button>
+                  <mat-radio-button value="2">Continue</mat-radio-button>
+                </mat-radio-group>
+              </mat-form-field>
+              <mat-form-field>
+                <input matInput placeholder="Request Description" disabled formControlName="objective2" [(ngModel)]="CoreValue">
+                <!-- <input matInput placeholder="Request Description" formControlName="objective2" [(ngModel)]="CoreValue"> -->
+                <!-- <textarea matInput disabled [(ngModel)]="ManagersComments" #message maxlength="256" placeholder="Managers Comments"></textarea> -->
+                <!-- <mat-hint align="end">{{message.value.length}} / 256</mat-hint> -->
+              </mat-form-field>
+              <mat-form-field>
+                <input matInput placeholder="Feed Forward Comments" formControlName="objective3" [(ngModel)]="Mindset">
+                <!-- <textarea matInput disabled [(ngModel)]="ManagersComments" #message maxlength="256" placeholder="Managers Comments"></textarea> -->
+                <!-- <mat-hint align="end">{{message.value.length}} / 256</mat-hint> -->
+              </mat-form-field>
+              <!-- <mat-form-field>
+                <textarea matInput [(ngModel)]="Performance" #message maxlength="256" formControlName="objective1"
+                  placeholder="Performance" disabled></textarea>
+
+              </mat-form-field> -->
+              <mat-form-field>
+                <input matInput placeholder="Managers Comments" disabled formControlName="objective4">
+                <!-- <textarea matInput disabled [(ngModel)]="ManagersComments" #message maxlength="256" placeholder="Managers Comments"></textarea> -->
+                <!-- <mat-hint align="end">{{message.value.length}} / 256</mat-hint> -->
+              </mat-form-field>
+
+            </mat-card>
+          </form>
+        </div>
+
+      </div>
+      <div class="row pull-right" style="margin-bottom:15px;text-align: right">
+        <div class="col-lg-8 col-lg-offset-10" style="min-width: 100%">&nbsp;&nbsp;</div>
+        <div class="col-lg-2 pull-right" style="text-align: right;right: 0;">
+
+          <button color="warn" class="pull-right" style="margin-right: -50px" mat-raised-button (click)="save()">Save</button>
+        </div>
+      </div>
+    </div>
+  </mat-tab>
+  <mat-tab>
+    <ng-template mat-tab-label>
+      Give (Proactively)
+    </ng-template>
+    <div class="card-body">
+      <div class="row">
+        <div class="text-center col-md-12">
+          <form [formGroup]="PlanFormGroup">
+            <mat-card>
+              <mat-form-field>
+                <input matInput placeholder="Year Month:" formControlName="market" [owlDateTimeTrigger]="dt2"
+                  [owlDateTime]="dt2" [formControl]="dateTime" style="width: 100%">
+                <owl-date-time [pickerType]="'calendar'" [startView]="'year'" (yearSelected)="chosenYearHandler($event)"
+                  (monthSelected)="chosenMonthHandler($event, dt2)" #dt2="owlDateTime"></owl-date-time>
+              </mat-form-field>
+
+              <mat-form-field>
+                <mat-select placeholder="Requested By" formControlName="printFormat" [(ngModel)]="printFormat">
+                  <mat-option [value]="">Please select Employee</mat-option>
+                  <mat-option [value]="1">Nikhil Guptha</mat-option>
+                  <!-- <mat-option [value]="">Behaviours</mat-option> -->
+                </mat-select>
+              </mat-form-field>
+              <mat-form-field>
+                <input matInput placeholder="" style="display: none">
+                <mat-radio-group formControlName="objective1">
+                  <mat-radio-button value="1" style="margin: 10px">Consider</mat-radio-button>
+                  <mat-radio-button value="2">Continue</mat-radio-button>
+                </mat-radio-group>
+              </mat-form-field>
+              <mat-form-field>
+                <input matInput placeholder="Feed Forward Comments" formControlName="objective2" [(ngModel)]="CoreValue">
+                <!-- <input matInput placeholder="Request Description" formControlName="objective2" [(ngModel)]="CoreValue"> -->
+                <!-- <textarea matInput disabled [(ngModel)]="ManagersComments" #message maxlength="256" placeholder="Managers Comments"></textarea> -->
+                <!-- <mat-hint align="end">{{message.value.length}} / 256</mat-hint> -->
+              </mat-form-field>
+
+              <mat-form-field>
+                <input matInput placeholder="Managers Comments" formControlName="objective4" disabled>
+                <!-- <textarea matInput disabled [(ngModel)]="ManagersComments" #message maxlength="256" placeholder="Managers Comments"></textarea> -->
+                <!-- <mat-hint align="end">{{message.value.length}} / 256</mat-hint> -->
+              </mat-form-field>
+
+            </mat-card>
+          </form>
+        </div>
+
+      </div>
+      <div class="row pull-right" style="margin-bottom:15px;text-align: right">
+        <div class="col-lg-8 col-lg-offset-10" style="min-width: 100%">&nbsp;&nbsp;</div>
+        <div class="col-lg-2 pull-right" style="text-align: right;right: 0;">
+
+          <button color="warn" class="pull-right" style="margin-right: -50px" mat-raised-button (click)="save()">Save</button>
+        </div>
+      </div>
+    </div>
+  </mat-tab>
+  <mat-tab>
+    <ng-template mat-tab-label>
+      Request
+    </ng-template>
+    <div class="card-body">
+      <div class="row">
+        <div class="text-center col-md-12">
+          <form [formGroup]="PlanFormGroup">
+            <mat-card>
+              <mat-form-field>
+                <mat-select placeholder="Requested By" formControlName="printFormat" [(ngModel)]="printFormat">
+                  <mat-option [value]="">Please select Employee</mat-option>
+                  <mat-option [value]="1">Nikhil Guptha</mat-option>
+                  <!-- <mat-option [value]="">Behaviours</mat-option> -->
+                </mat-select>
+              </mat-form-field>
+
+              <mat-form-field>
+                <input matInput placeholder="Feed Forward Comments" formControlName="objective2" [(ngModel)]="CoreValue">
+                <!-- <input matInput placeholder="Request Description" formControlName="objective2" [(ngModel)]="CoreValue"> -->
+                <!-- <textarea matInput disabled [(ngModel)]="ManagersComments" #message maxlength="256" placeholder="Managers Comments"></textarea> -->
+                <!-- <mat-hint align="end">{{message.value.length}} / 256</mat-hint> -->
+              </mat-form-field>
+
+            </mat-card>
+          </form>
+        </div>
+
+      </div>
+      <div class="row pull-right" style="margin-bottom:15px;text-align: right">
+        <div class="col-lg-8 col-lg-offset-10" style="min-width: 100%">&nbsp;&nbsp;</div>
+        <div class="col-lg-2 pull-right" style="text-align: right;right: 0;">
+
+          <button color="warn" class="pull-right" style="margin-right: -50px" mat-raised-button (click)="save()">Save</button>
+        </div>
+      </div>
+    </div>
+  </mat-tab>
+</mat-tab-group>

@@ -10,9 +10,10 @@ import { LoginComponent } from './views/login/login.component';
 import { RegisterComponent } from './views/register/register.component';
 import { PepComponent } from './views/pep/pep.component';
 import { DashComponent } from './views/dash/dash.component';
-import { GcComponent } from './views/gc/gc.component'
-import{EmpregisterComponent} from './views/empregister/empregister.component'
-import{EmplistComponent} from './views/emplist/emplist.component'
+import { GcComponent } from './views/gc/gc.component';
+import { EmpregisterComponent } from './views/empregister/empregister.component';
+import { EmplistComponent } from './views/emplist/emplist.component';
+import { FeedforComponent } from './views/feedfor/feedfor.component';
 export const routes: Routes = [
   {
     path: '',
@@ -36,11 +37,9 @@ export const routes: Routes = [
 
   },
   {
-    path: '404',
-    component: P404Component,
-    data: {
-      title: 'Page 404'
-    }
+    path: 'Feed',
+    component: FeedforComponent,
+
   },
   {
     path: '500',
