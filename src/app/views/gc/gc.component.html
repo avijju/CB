@@ -1,23 +1,36 @@
-<mat-tab-group>
+<mat-tab-group (selectedTabChange)="yourFn($event)">
   <mat-tab>
     <ng-template mat-tab-label>
-      Receive (5 - 3)
+      Receive (<span style="color: green">5-</span> <span style="color: red">3</span>)
     </ng-template>
-    <div class="list-type4 card PanelShadow" style="overflow: hidden;margin-bottom: 0px">
+    <div class="
+  list-type4 card PanelShadow" style="overflow: hidden;margin-bottom: 0px">
       <ol style="overflow: hidden;margin-bottom: 0px">
-      <li class="first"><a href="#"><div class="col-lg-12" style="display: block">
-        <div class="col-lg-10" style="display: block"><strong>From - Nikhil Gupta </strong> <p class="pull-right"> Date Time - 12/11/2018 11:30:34</p></div>
-        
-        <div class="col-lg-12">Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem </div>
-      </div></a></li>
-      <li class="second"><a href="#"><div class="col-lg-12" style="display: block">
-        <div class="col-lg-10" style="display: block"><strong>From - Nikhil Gupta </strong> <p class="pull-right"> Date Time - 12/11/2018 11:30:34</p></div>
-        
-        <div class="col-lg-12">Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem </div>
-      </div></a></li>
-      
+        <li class="first"><a href="#">
+            <div class="col-lg-12" style="display: block">
+              <div class="col-lg-10" style="display: block"><strong>From - Nikhil Gupta </strong>
+                <p class="pull-right"> Date Time - 12/11/2018 11:30:34</p>
+              </div>
+
+              <div class="col-lg-12">Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem
+                Ipsum
+                Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem </div>
+            </div>
+          </a></li>
+        <li class="second"><a href="#">
+            <div class="col-lg-12" style="display: block">
+              <div class="col-lg-10" style="display: block"><strong>From - Nikhil Gupta </strong>
+                <p class="pull-right"> Date Time - 12/11/2018 11:30:34</p>
+              </div>
+
+              <div class="col-lg-12">Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem
+                Ipsum
+                Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem </div>
+            </div>
+          </a></li>
+
       </ol>
-      </div>
+    </div>
   </mat-tab>
   <mat-tab>
     <ng-template mat-tab-label>
@@ -25,19 +38,203 @@
     </ng-template>
     <div class="list-type4 card PanelShadow" style="overflow: hidden;margin-bottom: 0px">
       <ol style="overflow: hidden;margin-bottom: 0px">
-      <li class="first"><a href="#"><div class="col-lg-12" style="display: block">
-        <div class="col-lg-10" style="display: block"><strong>Given To  - Nikhil Gupta </strong> <p class="pull-right"> Date Time - 12/11/2018 11:30:34</p></div>
-        
-        <div class="col-lg-12">Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem </div>
-      </div></a></li>
-      <li class="second"><a href="#"><div class="col-lg-12" style="display: block">
-        <div class="col-lg-10" style="display: block"><strong>Given To  - Nikhil Gupta </strong> <p class="pull-right"> Date Time - 12/11/2018 11:30:34</p></div>
-        
-        <div class="col-lg-12">Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem </div>
-      </div></a></li>
-      
+        <li class="first"><a href="#">
+            <div class="col-lg-12" style="display: block">
+              <div class="col-lg-10" style="display: block"><strong>Given To - Nikhil Gupta </strong>
+                <p class="pull-right"> Date Time - 12/11/2018 11:30:34</p>
+              </div>
+
+              <div class="col-lg-12">Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem
+                Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem </div>
+            </div>
+          </a></li>
+        <li class="second"><a href="#">
+            <div class="col-lg-12" style="display: block">
+              <div class="col-lg-10" style="display: block"><strong>Given To - Nikhil Gupta </strong>
+                <p class="pull-right"> Date Time - 12/11/2018 11:30:34</p>
+              </div>
+
+              <div class="col-lg-12">Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem
+                Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem </div>
+            </div>
+          </a></li>
+
       </ol>
+    </div>
+  </mat-tab>
+  <mat-tab>
+    <ng-template mat-tab-label>
+      Give a card
+    </ng-template>
+    <div class="card-body">
+      <div class="row">
+        <div class="text-center col-md-12">
+          <form [formGroup]="PlanFormGroup">
+            <mat-card>
+              <mat-form-field>
+                <input matInput placeholder="Year Month:" formControlName="market" [owlDateTimeTrigger]="dt1" [min]="min"
+                  [max]="max" [owlDateTime]="dt1" [formControl]="dateTime" style="width: 100%">
+                <owl-date-time [pickerType]="'calendar'" [startView]="'year'" (yearSelected)="chosenYearHandler($event)"
+                  (monthSelected)="chosenMonthHandler($event, dt1)" #dt1="owlDateTime"></owl-date-time>
+              </mat-form-field>
+
+              <mat-form-field>
+                <mat-select placeholder="PEP Area" formControlName="printFormat" [(ngModel)]="printFormat">
+                  <mat-option [value]="">Please select Employee</mat-option>
+                  <mat-option [value]="1">Nikhil Guptha</mat-option>
+                  <!-- <mat-option [value]="">Behaviours</mat-option> -->
+                </mat-select>
+              </mat-form-field>
+              <mat-form-field>
+                <input matInput placeholder="Core Value" formControlName="objective2" [(ngModel)]="CoreValue">
+                <!-- <textarea matInput disabled [(ngModel)]="ManagersComments" #message maxlength="256" placeholder="Managers Comments"></textarea> -->
+                <!-- <mat-hint align="end">{{message.value.length}} / 256</mat-hint> -->
+              </mat-form-field>
+              <mat-form-field>
+                <input matInput placeholder="Mindset" formControlName="objective3" [(ngModel)]="Mindset">
+                <!-- <textarea matInput disabled [(ngModel)]="ManagersComments" #message maxlength="256" placeholder="Managers Comments"></textarea> -->
+                <!-- <mat-hint align="end">{{message.value.length}} / 256</mat-hint> -->
+              </mat-form-field>
+              <mat-form-field>
+                <textarea matInput [(ngModel)]="Performance" #message maxlength="256" formControlName="objective1"
+                  placeholder="Performance" disabled></textarea>
+
+              </mat-form-field>
+              <mat-form-field>
+                <input matInput placeholder="Comments">
+                <!-- <textarea matInput disabled [(ngModel)]="ManagersComments" #message maxlength="256" placeholder="Managers Comments"></textarea> -->
+                <!-- <mat-hint align="end">{{message.value.length}} / 256</mat-hint> -->
+              </mat-form-field>
+
+            </mat-card>
+          </form>
+        </div>
+
       </div>
+      <div class="row pull-right" style="margin-bottom:15px;text-align: right">
+        <div class="col-lg-8 col-lg-offset-10" style="min-width: 100%">&nbsp;&nbsp;</div>
+        <div class="col-lg-2 pull-right" style="text-align: right;right: 0;">
+
+          <button color="warn" class="pull-right" style="margin-right: -50px" mat-raised-button (click)="save()">Save</button>
+        </div>
+      </div>
+    </div>
   </mat-tab>
 </mat-tab-group>
 <!-- class="row card card-accent-primary PanelShadow" -->
+<button type="button" class="btn btn-info btn-lg" id="modal_show" data-toggle="modal" data-target="#cardModal" style="display:none;">
+  Open Modal
+</button>
+<div class="modal fade" id="cardModal" tabindex="-1" role="dialog" aria-labelledby="gridSystemModalLabel">
+  <div class="modal-dialog modalCustom" role="document" style="z-index: 999999999999;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button> -->
+        <h1 id="myModalLabel">Choose a card</h1>
+      </div>
+      <div class="modal-body">
+        <div class="table-responsive">
+          <table class="tableCustom table-bordered">
+            <thead>
+              <tr>
+                <th>Core Value</th>
+                <th>Mindset</th>
+                <th>Developmental</th>
+                <th>Satisfactory</th>
+                <th>Good</th>
+                <th>Outstanding</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="cardCoreValue" rowspan="2">Be brutally HONEST</td>
+                <td class="cardMindset">Coaching & developing</td>
+                <td class="cardHover cardDOWN">Doesn’t give feedback & use emotions not facts to arrive at conclusion
+                </td>
+                <td class="cardHover cardUP">Provides feedback whenever asked, Couch bad with good (Good, Bad, Good)</td>
+                <td class="cardHover cardUP">Proactively seeks & provides feedback, Takes inititiaves to develop his
+                  team members, Sets clear goals of development of subordinates</td>
+                <td class="cardHover cardUP">Checks progress regularly against plan, innovate the process to make it
+                  interesting for stakeholders, learns from sub-ordinate, provide opportunities to his subordinate to
+                  lead in order to create another leader</td>
+              </tr>
+              <tr>
+                <td class="cardMindset">Leadership</td>
+                <td class="cardHover cardDOWN">Doesn’t show empathy towards team, Puts self interest ahead of team goal</td>
+                <td class="cardHover cardUP">Listens to team members empathetically, puts team's interest above
+                  everything, Sets examples for team by showing respect & care</td>
+                <td class="cardHover cardUP">Builds co-operation & creates positive environment where team members
+                  consistently improve team performance & productivity </td>
+                <td class="cardHover cardUP">Inspiring team to achieve organisations' goals, capitalizing the
+                  differences, create leaders in the team</td>
+              </tr>
+              <tr>
+                <td class="cardCoreValue" rowspan="2">Be informed and therefore FEARLESS</td>
+                <td class="cardMindset">Self development & Contineous improvement </td>
+                <td class="cardHover cardDOWN">Not open to learn new thing & feedback, not adaptable to change, repeats
+                  the same mistakes</td>
+                <td class="cardHover cardUP">Shows interest in learning new things, does not repeat the same mistakes,
+                  experiments/innovate to get work done, open for feedforward</td>
+                <td class="cardHover cardUP">Learn new things/skills proactively, share experiences with team, Ask
+                  questions curiously, challenge status quo</td>
+                <td class="cardHover cardUP">Apply newly learnt skills on the job to get better results, inspire others
+                  to learn, Take help of external sources to learn </td>
+              </tr>
+              <tr>
+                <td class="cardMindset">Critical thinking</td>
+                <td class="cardHover cardDOWN">Not able to identify the correct issue/ problem, sits on the problem &
+                  acts whevever reminded </td>
+                <td class="cardHover cardUP">Indetify & analyse issues, breaks into parts, Identifies links between
+                  situation & information/data</td>
+                <td class="cardHover cardUP">Recognizes & assess several factors which are not obvious, Analyse trends
+                  in data/information, come up with conclusion as well as solution </td>
+                <td class="cardHover cardUP">Thinks beyound his roles & into the future balances multiple perspectives
+                  like economy, stakeholders, market dynamics etc & proposes innovative solution </td>
+              </tr>
+              <tr>
+                <td class="cardCoreValue">FIGHT every inch & never ever give up</td>
+                <td class="cardMindset">Commitment</td>
+                <td class="cardHover cardDOWN">Defeted by obstacles, comes up with issues & needs puh for even doing
+                  regular work, dependent on others</td>
+                <td class="cardHover cardUP">Independently does allocated work in time & updates proactively on the
+                  same, Shows commitment </td>
+                <td class="cardHover cardUP">Proactively takes inititiaves to work better, find out effective,efficient
+                  ways of doing things/solve issues, Contributes beyond capabilities makes things happen </td>
+                <td class="cardHover cardUP">Push others to perform better, Extends support for better performance of
+                  collegues, Never hide poor performance, Innovate to help team achieve more than the target</td>
+              </tr>
+              <tr>
+                <td class="cardCoreValue" rowspan="2">Always make a PROFIT</td>
+                <td class="cardMindset">Service focus</td>
+                <td class="cardHover cardDOWN">Doesn’t not understand customer requirements, does job just for the sake
+                  of doing it or follow instructions blindly </td>
+                <td class="cardHover cardUP">Understand cutomer requirement & follow the process to achieve 100%
+                  quality, avoids rework</td>
+                <td class="cardHover cardUP">Involve all stakeholders to meet customer needs, seeks feedback from
+                  client & improve contineously </td>
+                <td class="cardHover cardUP">Manages complex customer issues effectively & build relationships,
+                  anticipating potential customer issues & resolve</td>
+              </tr>
+              <tr>
+                <td class="cardMindset">Profitability </td>
+                <td class="cardHover cardDOWN">Doesn’t not understand implications of actions & decisions on
+                  profitability </td>
+                <td class="cardHover cardUP">Identifies risks & costs associated with a deal, Uses data to make every
+                  deal profitable, refers to risk committee wherever required, Follows up for intime cash collection
+                </td>
+                <td class="cardHover cardUP">Always sign the contract with no or min risk, Goes extra miles to collect
+                  cash on time </td>
+                <td class="cardHover cardUP">Comes up with new profit avenues through existing business</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" id="close_modal" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary selectCard" data-dismiss="modal" (click)="anotherfunction()">Select
+          Card</button>
+      </div>
+    </div>
+  </div>
+</div>

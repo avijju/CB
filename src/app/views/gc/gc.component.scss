@@ -43,3 +43,27 @@
         box-shadow:inset 2em 0 red;
         background: #BEBEBE;
         }
+
+
+.tableCustom .cardHover:hover
+{
+	background : #3374AD;
+	cursor: pointer;
+}
+.tableCustom .cardSelected
+{
+	background : #3374AD;
+}
+.ratingUP, .ratingDOWN
+{
+	display: none;
+}
+.back
+{
+	display: none;
+}
+
+.modalCustom
+{
+	min-width:98% !important;
+}
