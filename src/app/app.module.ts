@@ -57,6 +57,7 @@ import { EmpregisterComponent } from './views/empregister/empregister.component'
 import { EmplistComponent } from './views/emplist/emplist.component';
 import {DataTableModule} from "angular2-datatable";
 import { FeedforComponent } from './views/feedfor/feedfor.component';
+import { MdashboardComponent } from './views/mdashboard/mdashboard.component';
 
 @NgModule({
   imports: [
@@ -93,6 +94,7 @@ import { FeedforComponent } from './views/feedfor/feedfor.component';
     EmpregisterComponent,
     EmplistComponent,
     FeedforComponent,
+    MdashboardComponent,
     
   ],
   providers: [{
