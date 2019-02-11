@@ -44,7 +44,8 @@ export class DashComponent implements OnInit {
       }]
     },
     legend: {
-      display: true
+      display: true,
+      position: 'right'
     }
   };
   public barChart1Colours: Array<any> = [

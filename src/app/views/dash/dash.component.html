@@ -49,7 +49,7 @@
             </div>
           </div>
         </td>
-        <td style="width: 75%;max-width: 400px;vertical-align: top">
+        <td style="width: 100%;max-width: 400px;vertical-align: top">
           <div class="card" style="width:100%;box-shadow: 5px 5px 7px rgba(33,33,33,.7);margin-left: 10px;right: 0;min-height:165px;">
             <div _ngcontent-c4="" class="card-header" style="font-weight: 600;font-size: 17px;width: 100%;"> My Cards
             </div>
@@ -79,34 +79,72 @@
             <div _ngcontent-c4="" class="card-header" style="font-weight: 600;font-size: 17px;width: 100%;"> My Feed
               Forward
             </div>
-            <div class="card-body">
-              <div class="row">
-                <div class="col-sm-5">
-                  <!-- <h4 class="card-title mb-0">Traffic</h4>
-          <div class="small text-muted">November 2017</div> -->
-                </div>
-                <!--/.col-->
-                <!-- <div class="col-sm-7 d-none d-md-block">
-             <button type="button" class="btn btn-primary float-right"><i class="icon-cloud-download"></i></button> 
-            <div class="btn-group btn-group-toggle float-right mr-3" data-toggle="buttons">
- <label class="btn btn-outline-secondary" [(ngModel)]="radioModel" btnRadio="Day" id="option1">Day</label> 
-              <label class="btn btn-outline-secondary" [(ngModel)]="radioModel" btnRadio="Month" id="option2">Month</label>
-               <label class="btn btn-outline-secondary" [(ngModel)]="radioModel" btnRadio="Year" id="option3">Year</label> 
-            </div>
-          </div> -->
-                <!--/.col-->
-              </div>
+            <div class="card-body form-group">
+
               <!--/.row-->
 
-              <div class="chart-wrapper col-lg-12 " style="max-height:200px;margin-top:10px;width: auto">
+              <div style="max-height:200px; max-width: 50vw; margin-top:10px;float: left;margin-left: 0px !important;margin-right: 0px !important">
                 <!-- <canvas baseChart class="chart" [datasets]="barChart1Data" [labels]="barChart1Labels" [options]="barChart1Options"
           [colors]="barChart1Colours" [legend]="barChart1Legend" [chartType]="barChart1Type"></canvas> -->
 
-                <canvas baseChart class="chart" [datasets]="barChart1Data" height="240" [labels]="barChart1Labels"
-                  [options]="barChart1Options" [colors]="barChart1Colours" [legend]="barChart1Legend" [chartType]="barChart1Type"></canvas>
+                <canvas baseChart class="chart" [datasets]="barChart1Data" [labels]="barChart1Labels" [options]="barChart1Options"
+                  [colors]="barChart1Colours" [legend]="barChart1Legend" [chartType]="barChart1Type"></canvas>
 
               </div>
+              <div style="max-height:200px; max-width: 33vw; min-width: 33vw;margin-top:10px;float: right;overflow: hidden;margin-right: -20px">
+                <table class="m_-3611262513649077556MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="388"
+                  style="width:100%;border-collapse:collapse">
+                  <tbody>
+                    <tr style="height:15.0pt">
+                      <td colspan="2" valign="top" style="width:96.0pt;border:solid windowtext 1.0pt;border-right:solid black 1.0pt;background:#17375d;padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt">
+                        <p class="MsoNormal" align="center" style="text-align:center"><b><span style="color:white">Received<u></u><u></u></span></b></p>
+                      </td>
+                      <td colspan="2" valign="top" style="width:96.0pt;border-top:solid windowtext 1.0pt;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid black 1.0pt;background:#17375d;padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt">
+                        <p class="MsoNormal" align="center" style="text-align:center"><b><span style="color:white">Given
+                              <u></u><u></u></span></b></p>
+                      </td>
+                      <td valign="top" style="width:99.0pt;border:solid windowtext 1.0pt;border-left:none;background:#17375d;padding:0cm 5.4pt 0cm 5.4pt;height:15.0pt">
+                        <p class="MsoNormal"><b><span style="color:white">Pending to be given<u></u><u></u></span></b></p>
+                      </td>
+                    </tr>
+                    <tr style="height:14.25pt">
+                      <td valign="top" style="width:48.0pt;border:solid windowtext 1.0pt;border-top:none;background:#17375d;padding:0cm 5.4pt 0cm 5.4pt;height:14.25pt">
+                        <p class="MsoNormal"><b><span style="color:white">Consider<u></u><u></u></span></b></p>
+                      </td>
+                      <td valign="top" style="width:48.0pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;background:#17375d;padding:0cm 5.4pt 0cm 5.4pt;height:14.25pt">
+                        <p class="MsoNormal"><b><span style="color:white">Continue<u></u><u></u></span></b></p>
+                      </td>
+                      <td valign="top" style="width:48.0pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;background:#17375d;padding:0cm 5.4pt 0cm 5.4pt;height:14.25pt">
+                        <p class="MsoNormal"><b><span style="color:white">Consider<u></u><u></u></span></b></p>
+                      </td>
+                      <td valign="top" style="width:48.0pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;background:#17375d;padding:0cm 5.4pt 0cm 5.4pt;height:14.25pt">
+                        <p class="MsoNormal"><b><span style="color:white">Continue<u></u><u></u></span></b></p>
+                      </td>
+                      <td valign="top" style="width:99.0pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;background:#17375d;padding:0cm 5.4pt 0cm 5.4pt;height:14.25pt">
+                        <p class="MsoNormal"><b><span style="color:white">&nbsp;<u></u><u></u></span></b></p>
+                      </td>
+                    </tr>
+                    <tr style="height:14.25pt">
+                      <td valign="top" style="width:48.0pt;border:solid windowtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:14.25pt">
+                        <p class="MsoNormal" align="right" style="text-align:right"><span style="color:black">5<u></u><u></u></span></p>
+                      </td>
+                      <td valign="top" style="width:48.0pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:14.25pt">
+                        <p class="MsoNormal" align="right" style="text-align:right"><span style="color:black">7<u></u><u></u></span></p>
+                      </td>
+                      <td valign="top" style="width:48.0pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:14.25pt">
+                        <p class="MsoNormal" align="right" style="text-align:right"><span style="color:black">2<u></u><u></u></span></p>
+                      </td>
+                      <td valign="top" style="width:48.0pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:14.25pt">
+                        <p class="MsoNormal" align="right" style="text-align:right"><span style="color:black">1<u></u><u></u></span></p>
+                      </td>
+                      <td width="132" valign="top" style="width:99.0pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:14.25pt">
+                        <p class="MsoNormal" align="right" style="text-align:right"><span style="color:black">2<u></u><u></u></span></p>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
 
+              </div>
             </div>
 
           </div>

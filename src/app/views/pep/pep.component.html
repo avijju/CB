@@ -1,75 +1,6 @@
-<!-- PEP - Nikhil Gupta -->
-<div class="col-lg-12" style="text-align: center">
-  <h4 style="color:#d42e12;font-family:'Brandon Grotesque Black';">PEP - Nikhil Gupta</h4>
-</div>
-<hr _ngcontent-c3="" style="background-color: #bbb;height: 1px;width: 100%;margin-top: -5px;margin-bottom: 4px;z-index: 99999999999">
-<div class="row card card-accent-primary PanelShadow" style="margin-top:25px;margin-right: -40px;border-top-color:gray"
-  *ngIf="showPlanResultsPanel">
+<div class="row card card-accent-primary PanelShadow" style="margin-top:25px;margin-right: -40px;border-top-color:gray">
   <div class="card-header">
-    <!-- <div flex="100" layout="column"> -->
-    <!-- <div style="font-size: 10px; color: blue;" label ng-bind="::dateFields[2].label"></div> -->
-    <input placeholder="Year Month:" [owlDateTimeTrigger]="dt" [min]="min" [max]="max" [owlDateTime]="dt" [formControl]="dateTime">
-    <owl-date-time [pickerType]="'calendar'" [startView]="'year'" (yearSelected)="chosenYearHandler($event)"
-      (monthSelected)="chosenMonthHandler($event, dt)" #dt="owlDateTime"></owl-date-time>
-    <!-- <input matInput [min]="row.startDatess" [max]="endDate" [matDatepicker]="i" placeholder="Choose To Date"
-        [attr.id]="dtPicker + i" style="width:70px;" [value]="row.endDatess" id="txtSchTo_{{j}}" (dateInput)="ScheduleFromToDate($event)">
-      <mat-datepicker ng-model="dateFields.selectedDate" md-date-locale="dateFields.locale" md-mode="month"
-        md-open-on-focus="true">
-      </mat-datepicker> -->
-    <!-- </div>  -->
-    <button (click)="createPlan()" mat-raised-button color="red" class="pull-right">Create
-      PEP</button>
-  </div>
-
-  <!-- <mat-form-field style="width: 94%;margin-top: 10px;margin-left: 25px;">
-    <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
-  </mat-form-field> -->
-  <!-- Angular material data table starts here -->
-  <div class="example-container mat-elevation-z8">
-    <mat-table [dataSource]="dataSource" matSort>
-
-      <!-- ID Column -->
-      <ng-container matColumnDef="#">
-        <mat-header-cell *matHeaderCellDef mat-sort-header style="font-weight: bold;font-size: 15px;"> #
-        </mat-header-cell>
-        <mat-cell *matCellDef="let row"> {{row.id}} </mat-cell>
-      </ng-container>
-
-      <!-- Progress Column -->
-      <ng-container matColumnDef="PEPArea">
-        <mat-header-cell *matHeaderCellDef mat-sort-header style="font-weight: bold;font-size: 15px;"> PEP Area
-        </mat-header-cell>
-        <mat-cell *matCellDef="let row"> {{row.PEPArea }}</mat-cell>
-      </ng-container>
-
-      <!-- Name Column -->
-      <ng-container matColumnDef="EmployeeComments">
-        <mat-header-cell *matHeaderCellDef mat-sort-header style="font-weight: bold;font-size: 15px;"> Employee
-          Comments
-        </mat-header-cell>
-        <mat-cell *matCellDef="let row">
-          {{row.EmployeeComments}}
-        </mat-cell>
-      </ng-container>
-      <ng-container matColumnDef="ManagerComments">
-        <mat-header-cell *matHeaderCellDef mat-sort-header style="font-weight: bold;font-size: 15px;"> Manager Comments
-        </mat-header-cell>
-        <mat-cell *matCellDef="let row"> {{row.ManagerComments}} </mat-cell>
-      </ng-container>
-
-
-      <mat-header-row *matHeaderRowDef="displayedColumns;sticky:true"></mat-header-row>
-      <mat-row *matRowDef="let row; columns: displayedColumns;">
-      </mat-row>
-    </mat-table>
-    <mat-paginator [pageSizeOptions]="[5, 10, 20]"></mat-paginator>
-  </div>
-</div>
-
-<div class="row card card-accent-primary PanelShadow" style="margin-top:25px;margin-right: -40px;border-top-color:gray"
-  *ngIf="showEntryPane">
-  <div class="card-header">
-    Create New PEP<button (click)="back()" mat-raised-button color="warn" class="pull-right">Back</button>
+    Create New PEP<button (click)="back()" mat-raised-button color="warn" class="pull-right">Create New</button>
   </div>
 
   <div class="card-body">
@@ -84,17 +15,18 @@
                 (monthSelected)="chosenMonthHandler($event, dt1)" #dt1="owlDateTime"></owl-date-time>
             </mat-form-field>
 
+            <span>KPO Achivments</span>
+            <hr>
             <mat-form-field>
-              <mat-select placeholder="PEP Area" formControlName="printFormat" [(ngModel)]="printFormat">
-                <mat-option [value]="">Please select Area</mat-option>
-                <mat-option [value]="">KPO Achievements</mat-option>
-                <mat-option [value]="">Behaviours</mat-option>
-              </mat-select>
+              <input matInput placeholder="Employee Comments" value="Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum (11/02/2018 10:10:10) "
+                [disabled]="!ABC">
             </mat-form-field>
+
+            <span>Behaviours</span>
+            <hr>
             <mat-form-field>
-              <textarea matInput [(ngModel)]="EmployeeComments" #message maxlength="256" formControlName="objective1"
-                placeholder="Employee Comments"></textarea>
-              <mat-hint align="end">{{message.value.length}} / 256</mat-hint>
+              <input matInput placeholder="Employee Comments" value="Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum (11/02/2018 10:10:10) "
+                [disabled]="!ABC">
             </mat-form-field>
             <mat-form-field>
               <input matInput placeholder="Managers Comments" disabled>
@@ -111,7 +43,8 @@
       <div class="col-lg-8 col-lg-offset-10" style="min-width: 100%">&nbsp;&nbsp;</div>
       <div class="col-lg-2 pull-right" style="text-align: right;right: 0;">
 
-        <button color="accent" class="pull-right" mat-raised-button (click)="save()">Save</button>
+        <button *ngIf="showEntryPane" style="margin-right: -50px;" mat-raised-button color="warn" class="pull-right"
+          mat-raised-button (click)="save()">Save</button>
       </div>
     </div>
   </div>

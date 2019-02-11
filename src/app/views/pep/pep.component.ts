@@ -50,6 +50,8 @@ export class PepComponent implements OnInit {
   startDatess: Date;
   PlanFormGroup: FormGroup;
   isDisabled: boolean = true;
+  ABC: boolean = false;
+  model: any = {};
   constructor(private _formBuilder: FormBuilder) { }
 
   ngOnInit() {
@@ -114,8 +116,10 @@ export class PepComponent implements OnInit {
     this.showEntryPane = true;
   }
   back() {
-    this.showPlanResultsPanel = true;
-    this.showEntryPane = false;
+    // this.showPlanResultsPanel = true;
+    this.showEntryPane = true;
+    this.ABC = true;
+    this.model.type = '';
   }
 
 }
