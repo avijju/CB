@@ -11,7 +11,7 @@ import {
 import { MomentDateTimeAdapter } from 'ng-pick-datetime-moment';
 import * as _moment from 'moment';
 import { Moment } from 'moment';
-
+import * as $ from 'jquery';
 const moment = (_moment as any).default ? (_moment as any).default : _moment;
 
 export const MY_MOMENT_DATE_TIME_FORMATS: OwlDateTimeFormats = {
@@ -120,6 +120,10 @@ export class PepComponent implements OnInit {
     this.showEntryPane = true;
     this.ABC = true;
     this.model.type = '';
+    $('#A').val('');
+    $('#b').val('');
+    $('#c').val('');
+    $('#d').val('');
   }
 
 }

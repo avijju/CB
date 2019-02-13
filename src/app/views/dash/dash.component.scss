@@ -1,0 +1,43 @@
+table.GeneratedTable {
+  width: 30%;
+  background-color: #ffffff;
+  border-collapse: collapse;
+  border-width: 1px;
+  border-color: #ff0000;
+  border-style: solid;
+  color: #000000;
+  right:0;
+  margin-top: 50px;
+  margin-left: 33px;
+  
+}
+table.GenerateTable thead td{
+     font-family:'Brandon Grotesque Black';
+     text-align: center
+}
+table.GeneratedTable td, table.GeneratedTable th {
+  border-width: 1px;
+  border-color: #ff0000;
+  border-style: solid;
+  padding: 3px;
+}
+table.GenerateTable tbody td{
+    font-family:'Brandon Grotesque Light'
+}
+table.GeneratedTable thead {
+  background-color: #f7f7f7
+}
+.chartjs-size-monitor{
+        position: absolute;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    overflow: hidden;
+    pointer-events: none;
+    visibility: hidden;
+    z-index: -1;
+    width: 50%;
+    max-width: 50%;
+    min-width: 50%;
+}

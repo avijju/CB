@@ -29,6 +29,7 @@ export class DashComponent implements OnInit {
   ];
   public barChart1Labels: Array<any> = [];
   public barChart1Options: any = {
+    responsive: false,
     tooltips: {
       enabled: false,
       custom: CustomTooltips
@@ -45,7 +46,8 @@ export class DashComponent implements OnInit {
     },
     legend: {
       display: true,
-      position: 'right'
+      position: 'right',
+      padding: 0
     }
   };
   public barChart1Colours: Array<any> = [

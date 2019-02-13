@@ -1,12 +1,18 @@
+<div class="col-lg-12" style="text-align: center;max-width: 79%;">
+  <h4 style="color:#d42e12; font-family:'Brandon Grotesque Black';">Create Employee</h4>
+
+
+</div>
+<hr style="background-color: #bbb;height: 1px;width: 79%;margin-top: -5px;margin-left: 10px; margin-bottom: 4px;">
 <div class="app-body">
   <main class="d-flex  col-md-12" style="margin-left: -9vw;width: 100vw;">
     <div class="container">
       <div class="row">
         <div class="card col-md-12">
           <div class="card-body col-md-12">
-            <form>
-              <h1>Employee</h1>
-              <p class="text-muted">Create New Employee</p>
+            <form style="font-family:'Brandon Grotesque light';">
+              <!-- <h1>Employee</h1>
+              <p class="text-muted">Create New Employee</p> -->
               <div class="input-group col-md-12">
                 <div class="input-group col-md-6">
 
@@ -90,8 +96,8 @@
                 </div>
                 <div class="input-group col-md-6">
 
-                  <input type="number" class="form-control" placeholder="Emergency Contact Number" autocomplete="new-password"
-                    required>
+                  <input type="number" class="form-control" placeholder="Emergency Contact Number"
+                    autocomplete="new-password" required>
                 </div>
               </div>
               <br>
@@ -130,20 +136,23 @@
               <br>
               <div class="input-group col-md-12">
                 <div class="input-group col-md-6">
-                  <span class="help-block" style="width: 100%;">Date of joining &nbsp;&nbsp; </span>
+                  <span class="help-block" style="width: 100%;">Date of joining</span>
 
-                  <input class="form-control" id="date-input" name="date-input" placeholder="date of joining" type="date">
+                  <input class="form-control" id="date-input" name="date-input" placeholder="date of joining"
+                    type="date">
 
                 </div>
                 <div class="input-group col-md-6">
-                  <span class="help-block" style="width: 100%;">Date of Resign &nbsp;&nbsp; </span>
+                  <span class="help-block" style="width: 100%;">Date of Resign</span>
 
-                  <input class="form-control" id="date-input" name="date-input" placeholder="date of Resign" type="date">
+                  <input class="form-control" id="date-input" name="date-input" placeholder="date of Resign"
+                    type="date">
 
                 </div>
               </div>
               <br>
-              <button type="button" class="btn btn-block btn-success" (click)="save()">Create Account</button>
+              <button type="button" mat-raised-button color="warn" class="pull-right" (click)="save()">Create
+                Account</button>
             </form>
           </div>
 
