@@ -1,5 +1,6 @@
 table.GeneratedTable {
-  width: 30%;
+  max-width: 15vw;
+  min-width: 15vw;
   background-color: #ffffff;
   border-collapse: collapse;
   border-width: 1px;
@@ -7,19 +8,22 @@ table.GeneratedTable {
   border-style: solid;
   color: #000000;
   right:0;
-  margin-top: 50px;
-  margin-left: 33px;
+  margin-top: 25px;
+  margin-left: 13px;
   
 }
 table.GenerateTable thead td{
      font-family:'Brandon Grotesque Black';
-     text-align: center
+     text-align: center;
+     word-break: break-all;
+
 }
 table.GeneratedTable td, table.GeneratedTable th {
   border-width: 1px;
   border-color: #ff0000;
   border-style: solid;
-  padding: 3px;
+  // padding: 3px;
+  word-break: break-all;
 }
 table.GenerateTable tbody td{
     font-family:'Brandon Grotesque Light'

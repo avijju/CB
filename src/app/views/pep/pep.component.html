@@ -1,14 +1,14 @@
 <div class="col-lg-12" style="text-align: center">
-  <h4 style="color:#d42e12; font-family:'Brandon Grotesque Black';">My PEP</h4>
+  <h4 style="color:#d42e12; font-family:'Brandon Grotesque Black';margin-top: 1vh;">My PEP</h4>
 
 
 </div>
-<hr style="background-color: #bbb;height: 1px;width: 100%;margin-top: -5px;margin-bottom: 4px;">
-<div class="row card card-accent-primary PanelShadow" style="margin-top:25px;margin-right: -40px;">
-  <div class="card-header">
+<hr style="background-color: #bbb;height: 1px;width: 100%;margin-top: 1vh;margin-bottom: 1vh;">
+<div class="row card card-accent-primary PanelShadow" style="margin-top: 2vh;margin-right: -40px;">
+  <div class="card-header" style="max-height: 6vh;min-height: 6vh">
     <h5 *ngIf="showEntryPane" style="font-family:'Brandon Grotesque Black';">Create New PEP</h5>
     <button (click)="back()" mat-raised-button color="warn" *ngIf="!showEntryPane"
-      style="font-family:'Brandon Grotesque Black';" class="pull-right">Create New
+      style="font-family:'Brandon Grotesque Black';margin-top: -1vh" class="pull-right">Create New
       PEP</button>
   </div>
 
@@ -26,29 +26,32 @@
             </mat-form-field>
 
             <mat-form-field>
-              <textarea matInput placeholder="KPO Achivments" style="font-family:'Brandon Grotesque light';"
+              <textarea matInput placeholder="KPO Achivments"
+                style="font-family:'Brandon Grotesque light';height: 130px;color: black"
                 value="Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum (11/02/2018 10:10:10) " id="A"
                 [disabled]="!ABC"></textarea>
             </mat-form-field>
             <mat-form-field>
-              <textarea matInput placeholder="Behaviours" style="font-family:'Brandon Grotesque light';"
+              <textarea matInput placeholder="Behaviours"
+                style="font-family:'Brandon Grotesque light';height: 130px;color: black"
                 value="Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum (11/02/2018 10:10:10) " id="b"
                 [disabled]="!ABC"></textarea>
             </mat-form-field>
             <mat-form-field>
               <textarea matInput placeholder="Other Achivments and Comments"
-                style="font-family:'Brandon Grotesque light';"
+                style="font-family:'Brandon Grotesque light';height: 130px;color: black"
                 value="Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum (11/02/2018 10:10:10) " id="c"
                 [disabled]="!ABC"></textarea>
             </mat-form-field>
             <mat-form-field>
-              <textarea matInput placeholder="Next Month Priorities" style="font-family:'Brandon Grotesque light';"
+              <textarea matInput placeholder="Next Month Priorities"
+                style="font-family:'Brandon Grotesque light';height: 130px;color: black"
                 value="Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum (11/02/2018 10:10:10) " id="d"
                 [disabled]="!ABC"></textarea>
             </mat-form-field>
             <mat-form-field>
               <textarea matInput placeholder="Managers Comments" disabled
-                style="font-family:'Brandon Grotesque light';"></textarea>
+                style="font-family:'Brandon Grotesque light';height: 130px;color: black"></textarea>
 
               <!-- <textarea matInput disabled [(ngModel)]="ManagersComments" #message maxlength="256"
                 placeholder="Managers Comments"></textarea>
@@ -61,7 +64,15 @@
       </div>
 
     </div>
-    <div class="row" style="margin-bottom:15px;text-align: right">
+    <div id="outer">
+      <div class="inner"><button *ngIf="showEntryPane" style="float: left;" color="warn" mat-raised-button type="submit"
+          onClick="return false;">Save</button></div>
+      <!-- <div class="inner"><button type="submit" class="msgBtn2" onClick="return false;">Publish</button></div> -->
+      <div class="inner"><button *ngIf="showEntryPane" style="float: right;right: 0;left:63vw" class="pull-right"
+          color="warn" mat-raised-button type="submit">Submit</button>
+      </div>
+    </div>
+    <!-- <div class="row" style="margin-bottom:15px;text-align: right">
       <div class="col-lg-2 " style="text-align: right;right: 0;">
         <button *ngIf="showEntryPane" style="float: left;margin-left: 5px;margin-top: 3px" mat-raised-button
           color="warn" mat-raised-button (click)="save()">Submit</button>
@@ -72,6 +83,6 @@
 
         <button *ngIf="showEntryPane" style="    margin-right: -68vw;margin-top: -8vh;" mat-raised-button color="warn"
           class="pull-right" mat-raised-button (click)="save()">Save</button>
-      </div>
-    </div>
+      </div> -->
   </div>
+</div>

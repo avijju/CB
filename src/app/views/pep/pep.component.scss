@@ -105,3 +105,16 @@
 .cdk-global-overlay-wrapper, .cdk-overlay-container {
     z-index: 99999 !important;
   }
+#outer
+{
+    width:100%;
+    // text-align: center;
+}
+.inner
+{
+    display: inline-block;
+}
+::placeholder {
+  color: black;
+  font-size: 1.5em;
+}
